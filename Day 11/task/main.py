@@ -126,7 +126,7 @@ def blackjack():
             else:
                 is_game_over = True
 
-    while computer_score != 0 or computer_score < 21:
+    while computer_score != 0 and computer_score < 17:
         computer_cards.append(deal_card())
         computer_score = calculate_score(computer_cards)
 
