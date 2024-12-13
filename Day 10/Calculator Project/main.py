@@ -1,7 +1,5 @@
 from art import logo
 
-print(logo)
-
 def add(n1, n2):
     return n1 + n2
 
@@ -24,11 +22,12 @@ operations = {
 #print(operations["*"](4, 8))
 calculate = True
 
-n1 = int(input("Please type your first number: "))
+print(logo)
+n1 = float(input("Please type your first number: "))
 while calculate:
     o = input(" +\n -\n *\n /\n Which operator would you like to use?: ")
 
-    n2 = int(input("Please type your second number: "))
+    n2 = float(input("Please type your second number: "))
 
     n3 = operations[o](n1, n2)
 
@@ -38,6 +37,7 @@ while calculate:
     again = input("Do you want to continue working working with the previous calculation?"
               "type 'y' for yes, type 'n' for no.")
 
-    if again == "n":
-        calculate = False
+    if again == "y":
+        n1 = n3
+    else:
         n3 = 0
