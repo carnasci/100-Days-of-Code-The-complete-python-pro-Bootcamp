@@ -20,24 +20,29 @@ operations = {
 }
 
 #print(operations["*"](4, 8))
-calculate = True
+def calculator():
+    calculate = True
 
-print(logo)
-n1 = float(input("Please type your first number: "))
-while calculate:
-    o = input(" +\n -\n *\n /\n Which operator would you like to use?: ")
+    print(logo)
+    n1 = float(input("Please type your first number: "))
+    while calculate:
+        for symbol in operations:
+            print(symbol)
+        o = input("Which operator would you like to use?: ")
 
-    n2 = float(input("Please type your second number: "))
+        n2 = float(input("Please type your second number: "))
 
-    n3 = operations[o](n1, n2)
+        n3 = operations[o](n1, n2)
+        print(f"{n1} {o} {n2} = {n3}")
 
-    print(n3)
-    n1 = n3
+        again = input("Do you want to continue working working with the previous calculation?"
+                  "type 'y' for yes, type 'n' for no.")
 
-    again = input("Do you want to continue working working with the previous calculation?"
-              "type 'y' for yes, type 'n' for no.")
+        if again == "y":
+            n1 = n3
+        else:
+            calculate = False
+            print("\n" * 20)
+            calculator()
 
-    if again == "y":
-        n1 = n3
-    else:
-        n3 = 0
+calculator()
