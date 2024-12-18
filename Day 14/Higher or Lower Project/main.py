@@ -44,6 +44,7 @@ def game():
         print(vs)
         print(f"Compare B: {option_b["name"]}, a {option_b["description"]}, from {option_b["country"]}.")
         user_pick = input("Which has more followers? Type 'A' or 'B': ").lower()
+        print("\n" * 20)
         if user_pick == "a":
             user_pick = option_a
         else:
@@ -54,6 +55,7 @@ def game():
             option_a = user_pick
             game_score += 1
         else:
+            print(f"Sorry that's wrong. Final score: {game_score}")
             play_again = False
 
 
