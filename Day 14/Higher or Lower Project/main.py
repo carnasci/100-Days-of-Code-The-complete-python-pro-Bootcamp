@@ -17,6 +17,8 @@ def random_pick():
 #         return choice_b
 
 def compare_choices(list_of_choices):
+    """Takes a list of two options and returns the one with the most followers
+        as winner"""
     followers = 0
     winner = {}
     for item in list_of_choices:
