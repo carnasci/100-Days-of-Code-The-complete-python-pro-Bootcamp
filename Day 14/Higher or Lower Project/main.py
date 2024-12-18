@@ -36,6 +36,8 @@ def game():
         options.append(option_a)
         options.append(option_b)
         print(logo)
+        if game_score > 0:
+            print(f"You're right! Curent score: {game_score}")
         print(f"Compare A: {option_a["name"]}, a {option_a["description"]}, from {option_a["country"]}.")
         print(vs)
         print(f"Compare B: {option_b["name"]}, a {option_b["description"]}, from {option_b["country"]}.")
